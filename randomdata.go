@@ -1,4 +1,4 @@
-package gorandomdata
+package randomdata
 
 import (
 	"bufio"

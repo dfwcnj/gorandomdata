@@ -1,4 +1,4 @@
 
 
-package randomdata // import "github.com/dfwcnj/gorandomdata"
+package randomdata // import "github.com/dfwcnj/randomdata"
 
