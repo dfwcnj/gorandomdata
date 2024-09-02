@@ -1,4 +1,4 @@
-package randomdata
+package github.com/dfwcnj/randomdata
 
 import (
 	"bufio"
