@@ -30,7 +30,7 @@ func randSeq(slen int, rlen bool) string {
 // randomstrings(n int64, slen int)
 // generate n random strings with length slen
 // return a slice containing the strings
-func randomstrings(n int64, slen int, rlen bool, emit bool) []string {
+func Randomstrings(n int64, slen int, rlen bool, emit bool) []string {
 	//log.Print("rlen ", rlen)
 	var ssl []string
 	if emit == true {
@@ -50,7 +50,7 @@ func randomstrings(n int64, slen int, rlen bool, emit bool) []string {
 // randomints(ņ int)
 // generate n random int64 values
 // return a slice containing the int64 values
-func randomuints(n int64, emit bool) []uint64 {
+func Randomuints(n int64, emit bool) []uint64 {
 	usl := make([]uint64, 0)
 	if emit == true {
 		fp := os.Stdout
@@ -70,7 +70,7 @@ func randomuints(n int64, emit bool) []uint64 {
 // randomdates(n int64, format string)
 // generate n random dates with format
 // return a slice containing the random date strings
-func randomdates(n int64, format string, emit bool) []string {
+func Randomdates(n int64, format string, emit bool) []string {
 	now := time.Now().Unix()
 	var mod = int64(now)
 	var s string
