@@ -30,19 +30,11 @@ func randSeq(slen int, rlen bool) string {
 // randomstrings(n int64, slen int)
 // generate n random strings with length slen
 // return a slice containing the strings
-func Randomstrings(n int64, slen int, rlen bool, emit bool) []string {
+func Randomstrings(n int64, slen int, rlen bool) []string {
 	//log.Print("rlen ", rlen)
-	var ssl []string
-	if emit == true {
-		ssl = make([]string, 0)
-	}
+	ssl := make([]string, 0)
 	for _ = range n {
-		s := randSeq(slen, rlen)
-		if emit == true {
-			fmt.Println(s)
-		} else {
-			ssl = append(ssl, randSeq(slen, rlen))
-		}
+		ssl = append(ssl, randSeq(slen, rlen))
 	}
 	return ssl
 }
@@ -50,19 +42,10 @@ func Randomstrings(n int64, slen int, rlen bool, emit bool) []string {
 // randomints(ņ int)
 // generate n random int64 values
 // return a slice containing the int64 values
-func Randomuints(n int64, emit bool) []uint64 {
+func Randomuints(n int64) []uint64 {
 	usl := make([]uint64, 0)
-	if emit == true {
-		fp := os.Stdout
-		wp := bufio.NewWriterSize(fp, 1<<22)
-		for _ = range n {
-			s := fmt.Sprintln(rand.Uint64())
-			wp.WriteString(s)
-		}
-	} else {
-		for _ = range n {
-			usl = append(usl, rand.Uint64())
-		}
+	for _ = range n {
+		usl = append(usl, rand.Uint64())
 	}
 	return usl
 }
